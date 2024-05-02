@@ -2,7 +2,9 @@ const btn = document.querySelector("button");
 const list = document.querySelector("#images");
 
 async function getCats(numOfItems) {
-  const res = await fetch(` `);
+  const res = await fetch(
+    `https://api.thecatapi.com/v1/images/search?limit=${numOfItems}&breed_ids=beng&api_key=<YOUR APIY KEY HERE> `
+  );
   const data = await res.json();
 
   data.forEach((item) => {
